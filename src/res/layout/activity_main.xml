@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:gravity="center"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/btnRemote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:layout_centerHorizontal="true"                 
+        android:onClick="btnClick"
+        android:text="Remote" />
+
+    <Button
+        android:id="@+id/btnLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnRemote"
+        android:layout_below="@+id/btnRemote"
+        android:layout_marginTop="30dp"
+        android:onClick="btnClick"
+        android:text="Local" />
+
+    <Button
+        android:id="@+id/btnConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnLocal"
+        android:layout_below="@+id/btnLocal"
+        android:layout_marginTop="30dp"
+        android:onClick="btnClick"        
+        android:text="Config" />
+
+</RelativeLayout>

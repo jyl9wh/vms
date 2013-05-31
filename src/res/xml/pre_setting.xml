@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+	<PreferenceCategory
+        android:key="pref_key_remote_video"
+        android:title="远端视频设置" >
+        
+	    <EditTextPreference
+	        android:key="pref_key_remote_addr"
+        	android:title="远端视频地址"
+        	android:summary="远端视频地址"      
+	        android:dialogTitle="请输入远端视频地址(IP或者域名:端口)"
+	        android:defaultValue="www.3gvs.net:81" />
+	    
+	    <EditTextPreference
+	        android:key="pref_key_remote_username"
+        	android:title="用户名"
+        	android:summary="用户名"      
+	        android:dialogTitle="请输入用户名"
+	        android:defaultValue="dx" />		    	    
+
+	    <EditTextPreference
+	        android:key="pref_key_remote_password"
+        	android:title="密码"
+        	android:summary="密码"      
+	        android:dialogTitle="请输入密码" 
+	        android:defaultValue="12345" />
+	    
+	</PreferenceCategory>
+	
+	<PreferenceCategory        
+        android:key="pref_key_local_video"
+        android:title="本地视频设置" >
+        
+	    <EditTextPreference
+	        android:key="pref_key_local_addr"
+        	android:title="本地视频地址"
+        	android:summary="本地视频地址"      
+	        android:dialogTitle="请输入本地视频地址"
+	        android:defaultValue="rtsp://192.168.1.110/mpeg4cif" />
+	    
+	    <EditTextPreference
+	        android:key="pref_key_local_username"
+        	android:title="用户名"
+        	android:summary="用户名"      
+	        android:dialogTitle="请输入用户名" />		    	    
+
+	    <EditTextPreference
+	        android:key="pref_key_local_password"
+        	android:title="密码"
+        	android:summary="密码"      
+	        android:dialogTitle="请输入密码" />
+	    	    
+	</PreferenceCategory>	
+
+</PreferenceScreen>
