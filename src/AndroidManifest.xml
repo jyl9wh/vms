@@ -31,6 +31,7 @@
         
         <activity android:name="com.roro.vms.SettingsActivity" />
         <activity android:name="com.roro.vms.LocalVideoActivity" />
+        <activity android:name="com.roro.vms.RemoteVideoActivity" />
         
  		<activity
             android:name="io.vov.vitamio.activity.InitActivity"

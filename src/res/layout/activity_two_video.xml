@@ -6,19 +6,51 @@
     tools:context=".RemoteVideoActivity" >
     
 	 <RelativeLayout
-        android:id="@+id/remoteVideoView"
+        android:id="@+id/remoteVideoLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"         
-        android:layout_weight="1"/>        
+        android:layout_weight="1">
+        
+	 	<TextView
+	 	    android:id="@+id/txt1"
+	 	    android:layout_width="match_parent"
+	 	    android:layout_height="wrap_content"
+	 	    android:layout_alignParentLeft="true"
+	 	    android:layout_alignParentTop="true"
+	 	    android:text="远端视频"
+	 	    android:textAppearance="?android:attr/textAppearanceLarge" />	     
+	     
+	 	<VideoView        
+        android:id="@+id/remoteVideoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txt1"        
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+
+	 	
+	 </RelativeLayout>       
         
     <RelativeLayout 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
        	android:layout_weight="1" >
+ 		
+ 		<TextView
+ 	    android:id="@+id/txt2"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="wrap_content"
+ 	    android:layout_alignParentLeft="true"
+ 	    android:layout_alignParentTop="true"
+ 	    android:text="本地视频"
+ 	    android:textAppearance="?android:attr/textAppearanceLarge" />
+	 		 	
         <io.vov.vitamio.widget.VideoView        
         android:id="@+id/localVideoView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"        
+        android:layout_height="match_parent"  
+        android:layout_below="@id/txt2"      
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" />
     </RelativeLayout>

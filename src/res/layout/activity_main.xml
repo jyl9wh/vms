@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"        
         android:layout_centerHorizontal="true"                 
         android:onClick="btnClick"
-        android:text="Remote" />
+        android:text="远端视频" />
 
     <Button
         android:id="@+id/btnLocal"
@@ -21,7 +21,7 @@
         android:layout_below="@+id/btnRemote"
         android:layout_marginTop="30dp"
         android:onClick="btnClick"
-        android:text="Local" />
+        android:text="本地视频" />
 
     <Button
         android:id="@+id/btnConfig"
@@ -31,6 +31,6 @@
         android:layout_below="@+id/btnLocal"
         android:layout_marginTop="30dp"
         android:onClick="btnClick"        
-        android:text="Config" />
+        android:text="参数配置" />
 
 </RelativeLayout>
