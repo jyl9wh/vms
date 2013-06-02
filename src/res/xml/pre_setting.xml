@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
 	<PreferenceCategory
-        android:key="pref_key_remote_video"
+        android:key="pref_key_remote_video" 
         android:title="远端视频设置" >
         
 	    <EditTextPreference

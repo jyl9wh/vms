@@ -11,6 +11,7 @@ import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
@@ -18,12 +19,9 @@ import android.widget.RelativeLayout.LayoutParams;
 
 public class TwoVideoActivity extends ActivityGroup {
 	
-	private final static String keyFirstRun = "firstRun";
+	final static String tag = TwoVideoActivity.class.getSimpleName();
 	
-    private final String INTENT_ACTION = "com.android.iVMS_5060.CameraList.View";
-    private final String USERNAME = "UserName";
-    private final String PASSWORD= "Password";
-    private final String SERVER_ADDRESS = "ServerAddress";	
+	private final static String keyFirstRun = "firstRun";
 	
 	private VideoView localVideoView;
 	private android.widget.VideoView remoteVideoView;
@@ -108,11 +106,33 @@ public class TwoVideoActivity extends ActivityGroup {
 	    	rtspBuf.append("&acspwd=").append(password);
 	    	rtspBuf.append("&usrtype=1&naluflag=1&transport=0/track");    	
 	    	
-			Uri uri = Uri.parse(rtspBuf.toString());
+			final Uri uri = Uri.parse(rtspBuf.toString());
 			
 			remoteVideoView = (android.widget.VideoView) findViewById(R.id.remoteVideoView);
 			remoteVideoView.setVideoURI(uri);
 			//vv.setVideoPath(path);
+			
+			
+			remoteVideoView.setOnCompletionListener(new android.media.MediaPlayer.OnCompletionListener() {
+				
+				@Override
+				public void onCompletion(android.media.MediaPlayer arg0) {
+					Log.w(tag, "onCompletion");
+					remoteVideoView.setVideoURI(uri);
+					remoteVideoView.start();
+				}
+			});
+			
+			remoteVideoView.setOnErrorListener(new android.media.MediaPlayer.OnErrorListener() {
+				
+				@Override
+				public boolean onError(android.media.MediaPlayer mp, int what, int extra) {
+					Log.w(tag, "onError");
+					return false;
+				}
+			});
+			
+			
 			remoteVideoView.start();
 	    	
 	    }	

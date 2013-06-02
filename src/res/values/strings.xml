@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">iVMS_5060</string>
+    <string name="app_name">VMS_1</string>
+    <string name="app_name_2">VMS_2</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_remote_video">RemoteVideoActivity</string>
-    
-    <!-- 
-    <string name="pref_key_remote_addr">pref_key_remote_addr</string>
-    <string name="pref_key_remote_username">pref_key_remote_username</string>
-    <string name="pref_key_remote_password">pref_key_remote_password</string>
-    <string name="pref_key_local_addr">pref_key_local_addr</string>
-    <string name="pref_key_local_username">pref_key_local_username</string>
-    <string name="pref_key_local_password">pref_key_local_password</string>
-     -->
 
 </resources>

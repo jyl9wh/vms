@@ -1,12 +1,34 @@
-<resources>
-
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <style name="my_textAppearanceLarge" parent="@android:style/TextAppearance.Holo.Large">        
+        <item name="android:textSize">30sp</item>
+    </style>
+    <style name="my_textAppearanceMedium" parent="@android:style/TextAppearance.Holo.Medium">
+        <item name="android:textSize">26sp</item>
+    </style>
+    <style name="my_textAppearanceSmall" parent="@android:style/TextAppearance.Holo.Small">
+        <item name="android:textSize">22sp</item>
+    </style> 
+    <style name="my_textAppearanceButton" parent="@android:style/TextAppearance.Holo.Widget.Button">
+        <item name="android:textSize">30sp</item>
+    </style> 
+    <!-- 
+	<style name="my_preferenceListHeader" parent="@android:style/Widget.Holo.TextView.ListSeparator" >
+	</style>
+	 -->   
     <!--
         Base application theme for API 14+. This theme completely replaces
         AppBaseTheme from BOTH res/values/styles.xml and
         res/values-v11/styles.xml on API 14+ devices.
     -->
     <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
-        <!-- API 14 theme customizations can go here. -->
+        <!-- API 14 theme customizations can go here. -->       
+        <item name="android:textAppearanceLarge">@style/my_textAppearanceLarge</item>
+        <item name="android:textAppearanceMedium">@style/my_textAppearanceMedium</item>
+        <item name="android:textAppearanceSmall">@style/my_textAppearanceSmall</item>
+        <!-- 
+        <item name="android:listSeparatorTextViewStyle">@style/my_preferenceListHeader</item>
+         --> 
     </style>
 
 </resources>
