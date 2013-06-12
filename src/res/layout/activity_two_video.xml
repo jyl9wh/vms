@@ -17,7 +17,7 @@
 	 	    android:layout_height="wrap_content"
 	 	    android:layout_alignParentLeft="true"
 	 	    android:layout_alignParentTop="true"
-	 	    android:text="远端视频"
+	 	    android:text="头盔视频"
 	 	    android:textAppearance="?android:attr/textAppearanceLarge" />	     
 	     
 	 	<VideoView        
@@ -43,7 +43,7 @@
  	    android:layout_height="wrap_content"
  	    android:layout_alignParentLeft="true"
  	    android:layout_alignParentTop="true"
- 	    android:text="本地视频"
+ 	    android:text="专家视频"
  	    android:textAppearance="?android:attr/textAppearanceLarge" />
 	 		 	
         <io.vov.vitamio.widget.VideoView        

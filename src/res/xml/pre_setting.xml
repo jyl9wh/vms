@@ -2,13 +2,13 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
 	<PreferenceCategory
         android:key="pref_key_remote_video" 
-        android:title="远端视频设置" >
+        android:title="头盔视频设置" >
         
 	    <EditTextPreference
 	        android:key="pref_key_remote_addr"
-        	android:title="远端视频地址"
-        	android:summary="远端视频地址"      
-	        android:dialogTitle="请输入远端视频地址(IP或者域名:端口)"
+        	android:title="头盔视频地址"
+        	android:summary="头盔视频地址"      
+	        android:dialogTitle="请输入头盔视频地址(IP或者域名:端口)"
 	        android:defaultValue="192.168.1.120:81" />
 	    
 	    <EditTextPreference
@@ -54,13 +54,13 @@
 	
 	<PreferenceCategory        
         android:key="pref_key_local_video"
-        android:title="本地视频设置" >
+        android:title="专家视频设置" >
         
 	    <EditTextPreference
 	        android:key="pref_key_local_addr"
-        	android:title="本地视频地址"
-        	android:summary="本地视频地址"      
-	        android:dialogTitle="请输入本地视频地址"
+        	android:title="专家视频地址"
+        	android:summary="专家视频地址"      
+	        android:dialogTitle="请输入专家视频地址"
 	        android:defaultValue="rtsp://192.168.1.111/mpeg4cif" />
 	    
 	    <EditTextPreference

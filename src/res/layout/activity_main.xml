@@ -12,7 +12,7 @@
         android:layout_centerHorizontal="true"                 
         android:onClick="btnClick"
         android:textAppearance="@style/my_textAppearanceButton"
-        android:text="远端视频" />
+        android:text="头盔视频" />
 
     <Button
         android:id="@+id/btnLocal"
@@ -23,7 +23,7 @@
         android:layout_marginTop="30dp"
         android:onClick="btnClick"
         android:textAppearance="@style/my_textAppearanceButton"
-        android:text="本地视频" />
+        android:text="专家视频" />
 
     <Button
         android:id="@+id/btnConfig"
