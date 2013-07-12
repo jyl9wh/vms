@@ -25,27 +25,28 @@
 	        android:dialogTitle="请输入密码" 
 	        android:defaultValue="12345" />
 	    
+	    <!-- 
 	    <CheckBoxPreference
 	  	  	android:key="pref_key_remote_use_vitamio"
         	android:title="使用vitamio"
         	android:summary="使用vitamio播放"	        
-	        android:defaultValue="false" /> 
+	        android:defaultValue="false" />
 	        
-	    <EditTextPreference
-	        android:dependency="pref_key_remote_use_vitamio"
+	   	--> 
+	        
+	    <EditTextPreference	        
 	        android:key="pref_key_remote_deviceid"
         	android:title="设备ID"
         	android:summary="设备ID"      
 	        android:dialogTitle="请输入设备ID" 
 	        android:defaultValue="dx11" />	 
 	        
-	    <EditTextPreference
-	        android:dependency="pref_key_remote_use_vitamio"
+	    <EditTextPreference	        
 	        android:key="pref_key_remote_channel"
         	android:title="通道"
         	android:summary="通道"      
 	        android:dialogTitle="请输入通道" 
-	        android:defaultValue="1" />	 
+	        android:defaultValue="1" />	   	 	 
 	        
 	    <ListPreference />
 	    
@@ -60,8 +61,8 @@
 	        android:key="pref_key_local_addr"
         	android:title="专家视频地址"
         	android:summary="专家视频地址"      
-	        android:dialogTitle="请输入专家视频地址"
-	        android:defaultValue="rtsp://192.168.1.111/mpeg4cif" />
+	        android:dialogTitle="请输入专家视频地址(IP或者域名:端口)"
+	        android:defaultValue="192.168.1.111:8000" />
 	    
 	    <EditTextPreference
 	        android:key="pref_key_local_username"

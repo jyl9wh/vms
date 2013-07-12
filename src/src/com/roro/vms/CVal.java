@@ -9,5 +9,7 @@ public interface CVal {
 	String pref_key_remote_use_vitamio = "pref_key_remote_use_vitamio";
 	
 	String pref_key_local_addr 		= "pref_key_local_addr";
+	String pref_key_local_username 	= "pref_key_local_username";
+	String pref_key_local_password 	= "pref_key_local_password";
 	
 }

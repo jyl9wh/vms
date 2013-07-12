@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.text.AlteredCharSequence;
 import android.view.View;
 
 public class MainActivity extends Activity {
@@ -101,7 +100,8 @@ public class MainActivity extends Activity {
     }
     
     private void start_local_video() {
-		Intent intent = new Intent(this, LocalVideoActivity.class);
+		//Intent intent = new Intent(this, LocalVideoActivity.class);
+		Intent intent = new Intent(this, LocalYMVideoActivity.class);		
 		startActivity(intent);  	
     }
     

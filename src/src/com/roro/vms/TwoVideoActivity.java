@@ -1,10 +1,7 @@
 package com.roro.vms;
 
-import io.vov.vitamio.MediaPlayer;
-import io.vov.vitamio.widget.MediaController;
 import io.vov.vitamio.widget.VideoView;
 import android.app.ActivityGroup;
-import android.app.LocalActivityManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -13,9 +10,11 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Menu;
-import android.view.ViewGroup;
-import android.widget.RelativeLayout;
-import android.widget.RelativeLayout.LayoutParams;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+import com.Player.Core.PlayerCore;
 
 public class TwoVideoActivity extends ActivityGroup {
 	
@@ -68,14 +67,26 @@ public class TwoVideoActivity extends ActivityGroup {
 	
 	private void start_local_video(){
     	SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-    	String serverAddr = sharedPreferences.getString(CVal.pref_key_local_addr, "");		
+    	String serverAddr = sharedPreferences.getString(CVal.pref_key_local_addr, "");
+    	String username = sharedPreferences.getString(CVal.pref_key_local_username, "");
+    	String password = sharedPreferences.getString(CVal.pref_key_local_password, "");
     	
-		localVideoView = (VideoView) findViewById(R.id.localVideoView);
-		//mVideoView.setVideoPath(serverAddr);
-		localVideoView.setVideoURI(Uri.parse(serverAddr));
-		localVideoView.setVideoQuality(MediaPlayer.VIDEOQUALITY_HIGH);
-		//localVideoView.setMediaController(new MediaController(this));
-		localVideoView.start();
+    	String[] ipport = serverAddr.split(":");
+    	String ip = (ipport != null && ipport.length > 0) ? ipport[0] : "";
+    	String port = (ipport != null && ipport.length > 1) ? ipport[1] : "0";
+
+    	ImageView iv = (ImageView)findViewById(R.id.imageview);
+    	
+    	try {
+    		PlayerCore ymPlayerCore = new PlayerCore(this, 4);
+        	ymPlayerCore.InitParam(ip, Integer.parseInt(port), username, password, 1);        	
+        	
+        	iv.setVisibility(View.VISIBLE);
+        	ymPlayerCore.Play(0, iv);
+    	} catch (Exception e){
+    		e.printStackTrace();
+    		Toast.makeText(this, "不能打开视频" + e.getMessage(), Toast.LENGTH_SHORT).show();
+    	}     	
 		
 	}
 	
